@@ -29,11 +29,7 @@ pipeline {
     post
     {
         failure {
-            mail (
-                to: "ds1618033@gmail.com",
-                subject: "Build ${currentBuild.fullDisplayName} has failed",
-                body: "${env.BUILD_URL} - buiild failed"
-                )
+            mail to: "ds1618033@gmail.com", subject: "Build ${currentBuild.fullDisplayName} has failed", body: "${env.BUILD_URL} - buiild failed";
         }
     }
 }
